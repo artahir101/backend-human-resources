@@ -30,7 +30,7 @@ module.exports = {
     try {
       await Employee.findByIdAndUpdate(req.query.id, req.body);
       res.status(200).json({
-        message: "Employees updated successfully",
+        message: "Employee updated successfully",
       })
     } catch (error) {
       res.status(500).json({
@@ -42,8 +42,7 @@ module.exports = {
     try {
       await Employee.findByIdAndDelete(req.query.id);
       res.status(200).json({
-        message: "Employees deleted successfully",
-        data
+        message: "Employee deleted successfully",
       })
     } catch (error) {
       res.status(500).json({
